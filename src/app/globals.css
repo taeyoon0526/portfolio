@@ -1,13 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: 255 255 255;
   --foreground: 23 23 23;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 10 10 10;
-    --foreground: 237 237 237;
-  }
+[data-theme="dark"] {
+  --background: 10 10 10;
+  --foreground: 237 237 237;
 }
 
 body {
