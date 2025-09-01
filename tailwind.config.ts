@@ -15,16 +15,18 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["light", "dark"],
-    darkTheme: "dark",
-    base: true,
-    styled: true,
-    utils: true,
-    prefix: "",
-    logs: true,
-    themeRoot: ":root",
-  },
+} as const;
+
+// DaisyUI 설정을 별도로 추가
+(config as any).daisyui = {
+  themes: ["light", "dark"],
+  darkTheme: "dark",
+  base: true,
+  styled: true,
+  utils: true,
+  prefix: "",
+  logs: true,
+  themeRoot: ":root",
 };
 
 export default config;
